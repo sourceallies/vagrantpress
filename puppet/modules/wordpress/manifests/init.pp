@@ -23,12 +23,12 @@ class wordpress::install{
     cwd=>"/vagrant/WordPress",
   }
 
-file { "/vagrant/WordPress/wp-content":
+  file {"/vagrant/WordPress/wp-content":
     ensure => "uploads",
     owner  => "vagrant",
     group  => "vagrant",
     mode   => 777,
-}
+  }
   
   # Import a MySQL database for a basic wordpress site.
   file{
