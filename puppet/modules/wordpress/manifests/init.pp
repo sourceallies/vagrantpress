@@ -18,8 +18,8 @@ class wordpress::install{
     cwd=>"/vagrant/"
   }
   
-  exec{"git-35":
-    command=>"/usr/bin/git checkout 3.5",
+  exec{"git-351":
+    command=>"/usr/bin/git checkout 3.5.1",
     cwd=>"/vagrant/WordPress",
   }
   
