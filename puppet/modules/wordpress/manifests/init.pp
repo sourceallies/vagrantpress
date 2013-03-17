@@ -25,8 +25,8 @@ class wordpress::install{
 
 file { "/vagrant/WordPress/wp-content":
     ensure => "uploads",
-    owner  => "root",
-    group  => "wheel",
+    owner  => "vagrant",
+    group  => "vagrant",
     mode   => 777,
 }
   
