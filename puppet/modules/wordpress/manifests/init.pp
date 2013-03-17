@@ -22,6 +22,13 @@ class wordpress::install{
     command=>"/usr/bin/git checkout 3.5.1",
     cwd=>"/vagrant/WordPress",
   }
+
+file { "/vagrant/WordPress/wp-content":
+    ensure => "uploads",
+    owner  => "root",
+    group  => "wheel",
+    mode   => 777,
+}
   
   # Import a MySQL database for a basic wordpress site.
   file{
